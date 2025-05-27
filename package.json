@@ -1,0 +1,12 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Zaichenko Yelyzaveta <selanta19@gmail.com>",
+  "license": "ISC"
+}

@@ -1,34 +1,33 @@
-const form = document.querySelector(".shape-form");
-const resultsList = document.querySelector('.results-list');
+// const form = document.querySelector(".shape-form");
+// const resultsList = document.querySelector('.results-list');
 
-    
-form.addEventListener('submit', onSubmit);
+// form.addEventListener('submit', onSubmit);
 
-function onSubmit(event){
-      event.preventDefault();
-      const inputText = form['main-input'].value.trim();
-      resultsList.innerHTML = ' ';
+// function onSubmit(event){
+//       event.preventDefault();
+//       const inputText = form['main-input'].value.trim();
+//       resultsList.innerHTML = ' ';
 
-      if (!inputText) {
-            resultsList.innerHTML = '<li>Please enter some shapes data.</li>';;
-            return;
-        }
+//       if (!inputText) {
+//             resultsList.innerHTML = '<li>Please enter some shapes data.</li>';;
+//             return;
+//         }
 
-        try {
-        const results = processShape(inputText);
-        results.forEach(result => {
-            const li = document.createElement('li');
-            li.textContent = result;
-            li.classList.add('result-item');
-            resultsList.appendChild(li);
-        });
-    } catch (error) {
-        const li = document.createElement('li');
-        li.textContent = `Error: ${error.message}`;
-        li.classList.add('error-message');
-        resultsList.appendChild(li);
-    }
-}
+//         try {
+//         const results = processShape(inputText);
+//         results.forEach(result => {
+//             const li = document.createElement('li');
+//             li.textContent = result;
+//             li.classList.add('result-item');
+//             resultsList.appendChild(li);
+//         });
+//     } catch (error) {
+//         const li = document.createElement('li');
+//         li.textContent = `Error: ${error.message}`;
+//         li.classList.add('error-message');
+//         resultsList.appendChild(li);
+//     }
+// }
 
 function printResult (shape){
     return `${shape.type} | Perimeter: ${Math.round(shape.getPerimeter())} Area: ${Math.round(shape.getArea())}`;
@@ -184,4 +183,4 @@ function processShape(inputText){
     return results;
 }
 
-
+module.exports = {createSquare};
