@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>My Shapes Application</title>
+</head>
+<body>
+    <header>My Shapes Application</header>
+    <main>
+        <div class="form-container">
+            <form class="shape-form" name ="main-form" action="">
+                <textarea class="shape-input" name="main-input" rows="5" cols="50" placeholder="Enter shapes data here, one per line. Example:
+Square TopRight 1 1 Side 1
+Rectangle TopRight 2 2 BottomLeft 1 1
+Circle Center 1 1 Radius 2
+Triangle Point1 5 5 Point2 8 8 Point3 10 2" required></textarea>
+                <button class="calculate-button" type="submit">Calculate</button>
+            </form>
+        </div>
+        <div class="output-container">
+            <ul class="results-list"></ul>
+        </div>
+    </main>
+   
+   <script src="main.js"></script> 
+</body>
+</html>
